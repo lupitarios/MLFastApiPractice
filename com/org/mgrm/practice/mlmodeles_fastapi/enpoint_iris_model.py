@@ -1,4 +1,5 @@
 import pickle
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 
@@ -32,3 +33,6 @@ def predict_iris(data: IrisFeatures):
 
     #Return the result as JSON
     return {'prediction': int(pred)}
+
+# To run the app, use the command:
+#uvicorn main:app --reload
